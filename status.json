@@ -1,7 +1,7 @@
 {
   "schema": "fastmcp-maintenance/1",
   "publisher": "fastmcp-actions",
-  "as_of": "2026-11-18T20:59:24Z",
+  "as_of": "2026-11-19T02:17:08Z",
   "automations": [
     {
       "id": "issue-link-gate",
@@ -10,20 +10,14 @@
       "cadence": "on each external PR change and each issue assignment",
       "runs_on": "github-actions",
       "state": "ok",
-      "last_ok_day": "2026-11-18",
+      "last_ok_day": "2026-11-19",
       "evidence_url": "https://github.com/PrefectHQ/fastmcp/actions/workflows/require-issue-link.yml",
       "window": "7d",
       "counts": {
-        "passed": 59,
-        "blocked": 27
+        "passed": 62,
+        "blocked": 26
       },
       "daily": [
-        {
-          "day": "2026-11-12",
-          "succeeded": 2,
-          "failed": 0,
-          "blocked": 6
-        },
         {
           "day": "2026-11-13",
           "succeeded": 11,
@@ -56,9 +50,15 @@
         },
         {
           "day": "2026-11-18",
-          "succeeded": 9,
+          "succeeded": 13,
           "failed": 0,
-          "blocked": 3
+          "blocked": 7
+        },
+        {
+          "day": "2026-11-19",
+          "succeeded": 1,
+          "failed": 0,
+          "blocked": 1
         }
       ]
     },
@@ -68,21 +68,15 @@
       "what": "labels each new issue and PR, and flags submissions that don't follow CONTRIBUTING.md",
       "cadence": "on each new issue or PR",
       "runs_on": "github-actions",
-      "state": "ok",
+      "state": "off",
       "last_ok_day": "2026-11-18",
       "evidence_url": "https://github.com/PrefectHQ/fastmcp/actions/workflows/marvin-label-triage.yml",
       "window": "7d",
       "counts": {
-        "succeeded": 66,
-        "failed": 17
+        "succeeded": 68,
+        "failed": 19
       },
       "daily": [
-        {
-          "day": "2026-11-12",
-          "succeeded": 9,
-          "failed": 1,
-          "blocked": 0
-        },
         {
           "day": "2026-11-13",
           "succeeded": 13,
@@ -115,8 +109,14 @@
         },
         {
           "day": "2026-11-18",
-          "succeeded": 5,
-          "failed": 1,
+          "succeeded": 16,
+          "failed": 4,
+          "blocked": 0
+        },
+        {
+          "day": "2026-11-19",
+          "succeeded": 0,
+          "failed": 0,
           "blocked": 0
         }
       ]
@@ -127,21 +127,15 @@
       "what": "points out when a new issue duplicates an existing one",
       "cadence": "on each new issue",
       "runs_on": "github-actions",
-      "state": "ok",
-      "last_ok_day": "2026-11-17",
+      "state": "off",
+      "last_ok_day": "2026-11-18",
       "evidence_url": "https://github.com/PrefectHQ/fastmcp/actions/workflows/marvin-dedupe-issues.yml",
       "window": "7d",
       "counts": {
-        "succeeded": 18,
+        "succeeded": 17,
         "failed": 0
       },
       "daily": [
-        {
-          "day": "2026-11-12",
-          "succeeded": 3,
-          "failed": 0,
-          "blocked": 0
-        },
         {
           "day": "2026-11-13",
           "succeeded": 6,
@@ -174,6 +168,12 @@
         },
         {
           "day": "2026-11-18",
+          "succeeded": 2,
+          "failed": 0,
+          "blocked": 0
+        },
+        {
+          "day": "2026-11-19",
           "succeeded": 0,
           "failed": 0,
           "blocked": 0
@@ -191,16 +191,10 @@
       "evidence_url": "https://github.com/PrefectHQ/fastmcp/actions/workflows/auto-close-duplicates.yml",
       "window": "7d",
       "counts": {
-        "succeeded": 14,
+        "succeeded": 12,
         "failed": 0
       },
       "daily": [
-        {
-          "day": "2026-11-12",
-          "succeeded": 2,
-          "failed": 0,
-          "blocked": 0
-        },
         {
           "day": "2026-11-13",
           "succeeded": 2,
@@ -236,6 +230,12 @@
           "succeeded": 2,
           "failed": 0,
           "blocked": 0
+        },
+        {
+          "day": "2026-11-19",
+          "succeeded": 0,
+          "failed": 0,
+          "blocked": 0
         }
       ]
     },
@@ -245,21 +245,15 @@
       "what": "explains failed test and static-analysis runs on pull requests",
       "cadence": "after each failed PR run",
       "runs_on": "github-actions",
-      "state": "ok",
+      "state": "off",
       "last_ok_day": "2026-11-18",
       "evidence_url": "https://github.com/PrefectHQ/fastmcp/actions/workflows/marvin-test-failure.yml",
       "window": "7d",
       "counts": {
-        "succeeded": 305,
-        "failed": 2
+        "succeeded": 295,
+        "failed": 3
       },
       "daily": [
-        {
-          "day": "2026-11-12",
-          "succeeded": 35,
-          "failed": 0,
-          "blocked": 0
-        },
         {
           "day": "2026-11-13",
           "succeeded": 43,
@@ -292,8 +286,14 @@
         },
         {
           "day": "2026-11-18",
-          "succeeded": 29,
-          "failed": 1,
+          "succeeded": 54,
+          "failed": 2,
+          "blocked": 0
+        },
+        {
+          "day": "2026-11-19",
+          "succeeded": 0,
+          "failed": 0,
           "blocked": 0
         }
       ]
@@ -304,21 +304,15 @@
       "what": "`/marvin` on an issue or PR asks the bot to act; `/tidy` hides resolved review threads",
       "cadence": "on a maintainer's comment",
       "runs_on": "github-actions",
-      "state": "ok",
+      "state": "degraded",
       "last_ok_day": "2026-11-18",
       "evidence_url": "https://github.com/PrefectHQ/fastmcp/actions/workflows/marvin-comment-on-issue.yml",
       "window": "7d",
       "counts": {
-        "succeeded": 14,
-        "failed": 15
+        "succeeded": 15,
+        "failed": 19
       },
       "daily": [
-        {
-          "day": "2026-11-12",
-          "succeeded": 1,
-          "failed": 3,
-          "blocked": 0
-        },
         {
           "day": "2026-11-13",
           "succeeded": 0,
@@ -351,7 +345,13 @@
         },
         {
           "day": "2026-11-18",
-          "succeeded": 2,
+          "succeeded": 4,
+          "failed": 7,
+          "blocked": 0
+        },
+        {
+          "day": "2026-11-19",
+          "succeeded": 0,
           "failed": 0,
           "blocked": 0
         }
@@ -364,20 +364,14 @@
       "cadence": "nightly",
       "runs_on": "github-actions",
       "state": "ok",
-      "last_ok_day": "2026-11-18",
+      "last_ok_day": "2026-11-19",
       "evidence_url": "https://github.com/PrefectHQ/fastmcp/actions/workflows/run-upgrade-checks.yml",
       "window": "7d",
       "counts": {
-        "succeeded": 4,
-        "failed": 6
+        "succeeded": 5,
+        "failed": 5
       },
       "daily": [
-        {
-          "day": "2026-11-12",
-          "succeeded": 0,
-          "failed": 1,
-          "blocked": 0
-        },
         {
           "day": "2026-11-13",
           "succeeded": 0,
@@ -413,6 +407,12 @@
           "succeeded": 1,
           "failed": 0,
           "blocked": 0
+        },
+        {
+          "day": "2026-11-19",
+          "succeeded": 1,
+          "failed": 0,
+          "blocked": 0
         }
       ]
     },
@@ -431,12 +431,6 @@
         "failed": 0
       },
       "daily": [
-        {
-          "day": "2026-11-12",
-          "succeeded": 0,
-          "failed": 0,
-          "blocked": 0
-        },
         {
           "day": "2026-11-13",
           "succeeded": 8,
@@ -472,6 +466,12 @@
           "succeeded": 4,
           "failed": 0,
           "blocked": 0
+        },
+        {
+          "day": "2026-11-19",
+          "succeeded": 0,
+          "failed": 0,
+          "blocked": 0
         }
       ]
     },
@@ -490,12 +490,6 @@
         "failed": 0
       },
       "daily": [
-        {
-          "day": "2026-11-12",
-          "succeeded": 0,
-          "failed": 0,
-          "blocked": 0
-        },
         {
           "day": "2026-11-13",
           "succeeded": 1,
@@ -529,6 +523,12 @@
         {
           "day": "2026-11-18",
           "succeeded": 1,
+          "failed": 0,
+          "blocked": 0
+        },
+        {
+          "day": "2026-11-19",
+          "succeeded": 0,
           "failed": 0,
           "blocked": 0
         }
@@ -570,7 +570,7 @@
           "number": 5773,
           "title": "fix(auth): reject malformed URL ports as SSRFError in validate_url",
           "url": "https://github.com/PrefectHQ/fastmcp/pull/5773",
-          "age_days": 32
+          "age_days": 33
         },
         {
           "number": 5794,
@@ -603,7 +603,7 @@
       "cadence": "twice daily",
       "runs_on": "github-actions",
       "state": "ok",
-      "last_ok_day": "2026-11-18",
+      "last_ok_day": "2026-11-19",
       "evidence_url": "https://github.com/PrefectHQ/fastmcp/pulls?q=is%3Apr+is%3Aopen+label%3Amissing-issue-link",
       "window": "now",
       "counts": {
@@ -614,23 +614,23 @@
     }
   ],
   "main": {
-    "sha": "45a6b545bb477b50f9f4a2749011ab27bcb9d417",
-    "url": "https://github.com/PrefectHQ/fastmcp/commit/45a6b545bb477b50f9f4a2749011ab27bcb9d417",
+    "sha": "429b1f7b878cc36bc767fe8ccd1626851e85c529",
+    "url": "https://github.com/PrefectHQ/fastmcp/commit/429b1f7b878cc36bc767fe8ccd1626851e85c529",
     "checks": [
       {
         "name": "Tests",
         "state": "ok",
-        "url": "https://github.com/PrefectHQ/fastmcp/actions/runs/44388451668"
+        "url": "https://github.com/PrefectHQ/fastmcp/actions/runs/44416420136"
       },
       {
         "name": "Run static analysis",
         "state": "ok",
-        "url": "https://github.com/PrefectHQ/fastmcp/actions/runs/44388451407"
+        "url": "https://github.com/PrefectHQ/fastmcp/actions/runs/44416419905"
       },
       {
         "name": "CodeQL",
         "state": "ok",
-        "url": "https://github.com/PrefectHQ/fastmcp/actions/runs/44388450520"
+        "url": "https://github.com/PrefectHQ/fastmcp/actions/runs/44416418793"
       }
     ]
   },
@@ -648,12 +648,12 @@
   "attention": {
     "schema": "fastmcp-attention/1",
     "repo": "PrefectHQ/fastmcp",
-    "as_of": "2026-11-18T20:58:25.997552+00:00",
+    "as_of": "2026-11-19T02:16:20.186232+00:00",
     "profile": "public-issue-signals",
     "judge": "jev",
     "assessment_model": "jev:jev-latest",
     "judged": 159,
-    "examined": 160,
+    "examined": 162,
     "has_more": false,
     "selection": "newest open issues",
     "items": [
@@ -12382,6 +12382,27 @@
         "linked_prs": []
       },
       {
+        "number": 6566,
+        "title": "Elicitation responses built from response_type use sanitized field names, so properties like first-name fail validation",
+        "url": "https://github.com/PrefectHQ/fastmcp/issues/6566",
+        "updated_at": "2026-11-19T01:17:18+00:00",
+        "score": 0.74,
+        "kind": "unclassified",
+        "judged": false,
+        "assessment": null,
+        "input_digest": "68c60abcf7a1d89e0771d90118a878b7f64792eb9f452f87df0454211cc420a6",
+        "reasons": [
+          {
+            "signal": "release_proximity",
+            "text": "reported near a relevant release",
+            "contribution": 0.74
+          }
+        ],
+        "maintainer_replied": false,
+        "assigned": false,
+        "linked_prs": []
+      },
+      {
         "number": 4163,
         "title": "Client-side CodeMode: apply the CodeMode transform against remote servers",
         "url": "https://github.com/PrefectHQ/fastmcp/issues/4163",
@@ -12534,27 +12555,6 @@
             "signal": "security",
             "text": "security-sensitive report",
             "contribution": 0.12
-          }
-        ],
-        "maintainer_replied": false,
-        "assigned": false,
-        "linked_prs": []
-      },
-      {
-        "number": 6529,
-        "title": "OpenAPI tool with a missing or null required path parameter fails as an internal error, not ValidationError",
-        "url": "https://github.com/PrefectHQ/fastmcp/issues/6529",
-        "updated_at": "2026-11-18T20:07:56+00:00",
-        "score": 0.54,
-        "kind": "unclassified",
-        "judged": false,
-        "assessment": null,
-        "input_digest": "dd64def1a04555aae4e0095e157cc6b74a5b97c6a37491addce7240972e9d30a",
-        "reasons": [
-          {
-            "signal": "release_proximity",
-            "text": "reported near a relevant release",
-            "contribution": 0.54
           }
         ],
         "maintainer_replied": false,
@@ -12866,6 +12866,32 @@
         "linked_prs": []
       },
       {
+        "number": 6561,
+        "title": "No built-in way to attach the failed call to an agent's feedback report",
+        "url": "https://github.com/PrefectHQ/fastmcp/issues/6561",
+        "updated_at": "2026-11-18T22:13:56+00:00",
+        "score": -0.26,
+        "kind": "unclassified",
+        "judged": false,
+        "assessment": null,
+        "input_digest": "8b920a8aacb6ac2f489738a777bedd9a339c8d3faa31f1ba5f1a70d33654053f",
+        "reasons": [
+          {
+            "signal": "feature_label",
+            "text": "enhancement label",
+            "contribution": -1.0
+          },
+          {
+            "signal": "release_proximity",
+            "text": "reported near a relevant release",
+            "contribution": 0.74
+          }
+        ],
+        "maintainer_replied": false,
+        "assigned": false,
+        "linked_prs": []
+      },
+      {
         "number": 4651,
         "title": "Move the MCP conformance pin forward \u2014 and unpin once 0.2.0 stabilizes",
         "url": "https://github.com/PrefectHQ/fastmcp/issues/4651",
@@ -13165,6 +13191,34 @@
         "maintainer_replied": false,
         "assigned": true,
         "linked_prs": []
+      },
+      {
+        "number": 6564,
+        "title": "Resource templates combining a literal '?' with '{&...}' query continuation fail to match and cannot be read",
+        "url": "https://github.com/PrefectHQ/fastmcp/issues/6564",
+        "updated_at": "2026-11-18T23:14:07+00:00",
+        "score": -0.76,
+        "kind": "unclassified",
+        "judged": false,
+        "assessment": null,
+        "input_digest": "e25c3725a3471ecf4cd44e8fa330f7936bcb7cc0626a4f7ecbea56dcc2008f95",
+        "reasons": [
+          {
+            "signal": "handled",
+            "text": "assigned or linked to a fix",
+            "contribution": -1.5
+          },
+          {
+            "signal": "release_proximity",
+            "text": "reported near a relevant release",
+            "contribution": 0.74
+          }
+        ],
+        "maintainer_replied": false,
+        "assigned": false,
+        "linked_prs": [
+          6565
+        ]
       },
       {
         "number": 3820,
